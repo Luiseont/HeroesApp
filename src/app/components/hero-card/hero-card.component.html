@@ -1,0 +1,10 @@
+<div class="card" style="padding:10px;" (click)=ClickCard();>
+    <img class="card-img-top img-fluid" [src]="Hero.img" width="50px">
+    <div class="card-block">
+      <h4 class="card-title">{{ Hero.nombre }}</h4>
+      <p class="card-text">{{ Hero.bio | slice:0:200 }}</p>
+      <p class="card-text"><small class="text-muted">{{ Hero.aparicion }}</small></p>
+
+      <a [routerLink]="['/Hero', Hero.id]"><button type="button" class="btn btn-outline-primary btn-block">Ver mas..</button></a>
+    </div>
+</div>

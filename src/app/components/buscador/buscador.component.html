@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-12 add-padding">
+      <h4>Buscando: {{ termino }}</h4>
+      <hr>
+      <div *ngIf="!resultados">
+        <div class="alert alert-danger">
+            <p>No hay resultados para esta busqueda..</p>
+        </div>
+      </div>
+      <div class="card-columns">
+        <!-- cards.. -->
+        <app-hero-card *ngFor="let hero of heroes;" [Hero] = "hero"></app-hero-card>
+        <!-- End card -->
+      </div>
+    </div>
+</div>

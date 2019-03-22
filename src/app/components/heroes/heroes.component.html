@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-12 add-padding">
+    <h1>Heroes de <small>Marvel y DC</small></h1>
+    <hr>
+    <div class="card-columns">
+      <!-- cards.. -->
+        <app-hero-card (SelectedHero)="AlertHero($event);" *ngFor="let hero of heroes;"[Hero] = "hero"></app-hero-card>
+      <!-- End card -->
+    </div>
+  </div>
+</div>
